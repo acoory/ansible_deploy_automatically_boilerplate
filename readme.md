@@ -1,3 +1,14 @@
+# Objectifs du projet
+Automatiser le déploiement d'applications à l'aide d'Ansible.
+Simplifier la gestion des environnements de développement/production via des rôles Ansible préconfigurés.
+Utiliser Docker et Docker Compose pour containeriser les applications et leurs dépendances.
+Fournir une infrastructure prête à l'emploi pour les projets Boilerplate avec une architecture modulaire.
+Fonctionnalités
+Gestion des dépendances : Installation automatique des outils nécessaires comme Docker, Docker Compose, NPM et autres.
+Clonage de dépôt : Clonage du dépôt de code source via Git pour une installation rapide.
+Déploiement automatique : Lancement des conteneurs Docker avec les configurations requises pour chaque application via Docker Compose.
+Support multi-environnement : Possibilité de déployer dans différents environnements (développement, production).
+
 # Guide d'Installation
 
 Ce guide vous explique les étapes nécessaires pour déployer et configurer votre projet avec Ansible et Docker.
