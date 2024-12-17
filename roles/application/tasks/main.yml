@@ -1,0 +1,11 @@
+---
+- name: Cloner le dépôt
+  git:
+    repo: https://github.com/acoory/boilerplate_express_clean_architecture
+    dest: /home/{{ ansible_user }}/boilerplate_express_clean_architecture
+    force: yes
+
+- name: Lancer le docker-compose
+  command: docker-compose -f compose-dev.yml up -d --build
+  args:
+    chdir: /home/{{ ansible_user }}/boilerplate_express_clean_architecture

@@ -1,0 +1,6 @@
+---
+- name: Installer npm
+  apt:
+    name: npm
+    state: latest
+    update_cache: true

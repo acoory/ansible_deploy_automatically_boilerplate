@@ -1,0 +1,2 @@
+---
+venv_path: "/home/{{ ansible_user }}/docker_venv"

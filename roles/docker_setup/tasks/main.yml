@@ -1,0 +1,16 @@
+---
+- name: Installer Docker via Snap
+  snap:
+    name: docker
+    state: present
+
+- name: Vérifier si docker-compose est déjà installé
+  command: docker-compose --version
+  register: docker_compose_check
+  ignore_errors: true
+
+- name: Installer docker-compose via apt (si nécessaire)
+  apt:
+    name: docker-compose
+    state: latest
+  when: docker_compose_check.rc != 0

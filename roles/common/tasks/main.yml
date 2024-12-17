@@ -1,0 +1,19 @@
+---
+- name: Installer aptitude
+  apt:
+    name: aptitude
+    state: latest
+    update_cache: true
+
+- name: Installer les paquets système nécessaires
+  apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
+    state: latest
+    update_cache: true
